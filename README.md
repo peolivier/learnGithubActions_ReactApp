@@ -74,9 +74,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 # Notes - learnGithubActions_ReactApp
+## Learning References
+
+[The Complete GitHub Actions & Workflows Guide](https://www.udemy.com/share/102DqF/)
+
 
 
 ```sh
-
+# https://create-react-app.dev/docs/getting-started
 npx create-react-app react-app
 ```
