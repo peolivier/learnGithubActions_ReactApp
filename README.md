@@ -69,18 +69,49 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-
-
-
-
 # Notes - learnGithubActions_ReactApp
+
 ## Learning References
 
 [The Complete GitHub Actions & Workflows Guide](https://www.udemy.com/share/102DqF/)
 
-
-
 ```sh
 # https://create-react-app.dev/docs/getting-started
 npx create-react-app react-app
+
+# npm test in Pipelines/CI (https://create-react-app.dev/docs/running-tests/#on-your-own-environment)
+set CI=true && npm test             # (cmd.exe) windows
+($env:CI = "true") -and (npm test)  # PowerShell (Windows)
+CI=true npm test                    # Linux, macOS (Bash)
+docker run -e CI=true [myImage] npm run test # Docker
+
+# Prettier (https://prettier.io/docs/en/install.html)
+npm install --save-dev --save-exact prettier
+
+npx prettier --check "**/*.{js,yml,yaml,css,scss,md}"
+npx prettier --write "**/*.{js,yml,yaml,css,scss,md}"
+
+# Surge (https://surge.sh/ -- Static web publishing for Front-End Developers)
+npm install -g surge && surge
+#---equivalent to---
+npx surge
+```
+
+
+### Surge - Quick GetStarted
+```sh
+npm install -g surge
+
+#Create or login to your account
+# * Enter Email and Password
+# * specify the "Build" path of your project
+# * define your domain name (or keep default)
+surge
+
+# See current projects with surge
+surge list
+
+# Github CI - Create Secrets for username/token
+surge whoami    # print your used Email (secrets.SURGE_LOGIN)
+surge token     # print a token to use (secrets.SURGE_TOKEN)
 ```
