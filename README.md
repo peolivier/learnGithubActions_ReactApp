@@ -161,9 +161,25 @@ link - https://github.com/semantic-release/semantic-release
 npm install --save-dev semantic-release
 npx semantic-release # Run locally
 
-# Create a Config file
+# Create a Config file or modify the `package.json`
 # https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration
 touch release.config.js
 # then edit...
+```
+in `package.json`
+```json
+    {
+    ///...
+    },
+    "release": {  
+        "branches": ["main"],
+        "repositoryUrl": "https://github.com/peolivier/learnGithubActions_ReactApp",
+        "plugins": [
+            "@semantic-release/commit-analyzer", 
+            "@semantic-release/release-notes-generator",
+            // '@semantic-release/npm', // we already have it
+            "@semantic-release/github"
+        ]
+    },
 ```
 
