@@ -115,3 +115,55 @@ surge list
 surge whoami    # print your used Email (secrets.SURGE_LOGIN)
 surge token     # print a token to use (secrets.SURGE_TOKEN)
 ```
+
+
+
+# Conventional Commits
+Conventional Commits - https://www.conventionalcommits.org/en/v1.0.0/  
+it following the _**Semantic Versionning**_ (https://semver.org/)
+
+`commit message` structure:
+```txt
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer]
+```
+
+examples:  
+```txt
+fix(cart): change cart endpoint
+
+BREAKING CHANGE: changed cart endpoint
+
+closes issues#12
+```
+```txt
+feat(auth): add Facebook authentication
+```
+```txt
+docs(auth): add auth docs
+```
+```txt
+ci: add new workflow
+```
+```txt
+style: update documentation styles
+```
+
+# semantic-release
+link - https://github.com/semantic-release/semantic-release  
+
+
+```sh
+# https://github.com/semantic-release/semantic-release/blob/master/docs/usage/installation.md#installation
+npm install --save-dev semantic-release
+npx semantic-release # Run locally
+
+# Create a Config file
+# https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration
+touch release.config.js
+# then edit...
+```
+
