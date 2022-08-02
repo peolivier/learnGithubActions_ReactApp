@@ -20,7 +20,7 @@ jobs:
       - name: Use NodeJS
         uses: actions/setup-node@v3
         with:
-          node-version: 12
+          node-version: 14
       - run: npm ci #Like `npm install`, but optimise for CI
       - run: npm run format:check
       - run: npm test -- --coverage
