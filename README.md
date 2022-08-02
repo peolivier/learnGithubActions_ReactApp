@@ -116,13 +116,13 @@ surge whoami    # print your used Email (secrets.SURGE_LOGIN)
 surge token     # print a token to use (secrets.SURGE_TOKEN)
 ```
 
-
-
 # Conventional Commits
+
 Conventional Commits - https://www.conventionalcommits.org/en/v1.0.0/  
 it following the _**Semantic Versionning**_ (https://semver.org/)
 
 `commit message` structure:
+
 ```txt
 <type>[optional scope]: <description>
 
@@ -131,7 +131,8 @@ it following the _**Semantic Versionning**_ (https://semver.org/)
 [optional footer]
 ```
 
-examples:  
+examples:
+
 ```txt
 fix(cart): change cart endpoint
 
@@ -139,22 +140,26 @@ BREAKING CHANGE: changed cart endpoint
 
 closes issues#12
 ```
+
 ```txt
 feat(auth): add Facebook authentication
 ```
+
 ```txt
 docs(auth): add auth docs
 ```
+
 ```txt
 ci: add new workflow
 ```
+
 ```txt
 style: update documentation styles
 ```
 
 # semantic-release
-link - https://github.com/semantic-release/semantic-release  
 
+link - https://github.com/semantic-release/semantic-release
 
 ```sh
 # https://github.com/semantic-release/semantic-release/blob/master/docs/usage/installation.md#installation
@@ -166,20 +171,21 @@ npx semantic-release # Run locally
 touch release.config.js
 # then edit...
 ```
+
 in `package.json`
+
 ```json
     {
     ///...
     },
-    "release": {  
+    "release": {
         "branches": ["main"],
         "repositoryUrl": "https://github.com/peolivier/learnGithubActions_ReactApp",
         "plugins": [
-            "@semantic-release/commit-analyzer", 
+            "@semantic-release/commit-analyzer",
             "@semantic-release/release-notes-generator",
             // '@semantic-release/npm', // we already have it
             "@semantic-release/github"
         ]
     },
 ```
-
