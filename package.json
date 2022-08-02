@@ -36,6 +36,15 @@
       "last 1 safari version"
     ]
   },
+  "release": {  
+    "branches": ["main"],
+    "repositoryUrl": "https://github.com/peolivier/learnGithubActions_ReactApp",
+    "plugins": [
+        "@semantic-release/commit-analyzer", 
+        "@semantic-release/release-notes-generator", 
+        "@semantic-release/github"
+    ]
+},
   "devDependencies": {
     "prettier": "2.7.1",
     "semantic-release": "^19.0.3"
