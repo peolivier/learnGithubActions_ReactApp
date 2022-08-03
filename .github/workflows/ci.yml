@@ -64,7 +64,7 @@ jobs:
       - name: Open Issue
         if: failure() && github.event_name == 'pull_request'
         run: |
-          curl -X "POST" 
+          curl -X "POST" \
             --url "https://api.github.com/repos/${{ github.repository }}/issues" \
             --header "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" \
             --header "Content-Type: application/json; charset=utf-8" \
