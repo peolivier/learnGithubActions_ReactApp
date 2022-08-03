@@ -158,7 +158,8 @@ style: update documentation styles
 ```
 
 ## Package to ensure conventional commits are use
-READ DOC at - **https://github.com/conventional-changelog/commitlint**  
+
+READ DOC at - **https://github.com/conventional-changelog/commitlint**
 
 ```sh
 #----------------------------------------------------------------------------
@@ -192,6 +193,7 @@ chmod a+x .husky/commit-msg
 ```
 
 # Helper tool to do Conventionnal Commits
+
 **https://github.com/commitizen/cz-cli**
 
 ```sh
@@ -199,6 +201,7 @@ npm install commitizen -g
 ```
 
 # in the Husky section
+
 ```json
 // in 'package.json
 {
@@ -209,18 +212,19 @@ npm install commitizen -g
     //...
   },
   "scripts": {
-      //...
+    //...
   },
   "husky": {
     "hooks": {
       "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
     }
-  },
+  }
 }
 ```
 
 # semantic-release
-link - https://github.com/semantic-release/semantic-release  
+
+link - https://github.com/semantic-release/semantic-release
 
 ```sh
 # https://github.com/semantic-release/semantic-release/blob/master/docs/usage/installation.md#installation
@@ -251,8 +255,6 @@ in `package.json`
     },
 ```
 
-
 # Slack Message - Get Notify!
-https://api.slack.com/  
 
-
+https://api.slack.com/
