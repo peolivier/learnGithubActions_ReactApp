@@ -157,6 +157,68 @@ ci: add new workflow
 style: update documentation styles
 ```
 
+## Package to ensure conventional commits are use
+READ DOC at - **https://github.com/conventional-changelog/commitlint**  
+
+```sh
+#----------------------------------------------------------------------------
+# https://github.com/conventional-changelog/commitlint#getting-started
+#----------------------------------------------------------------------------
+# Install commitlint cli and conventional config
+npm install --save-dev @commitlint/{config-conventional,cli}
+# For Windows:
+npm install --save-dev @commitlint/config-conventional @commitlint/cli
+
+# Configure commitlint to use conventional config
+echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
+
+# To lint commits before they are created you can use Husky's commit-msg hook:
+# Install Husky v6
+npm install husky --save-dev
+
+# Activate hooks (triggering mecanisim)
+npx husky install
+
+# Add hook for 'commit-msg'
+cat > .husky/commit-msg << EEE
+#!/bin/sh
+. "\$(dirname "\$0")/_/husky.sh"
+
+npx --no -- commitlint --edit "\${1}"
+EEE
+
+# Make hook executable
+chmod a+x .husky/commit-msg
+```
+
+# Helper tool to do Conventionnal Commits
+**https://github.com/commitizen/cz-cli**
+
+```sh
+npm install commitizen -g
+```
+
+# in the Husky section
+```json
+// in 'package.json
+{
+  "name": "react-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    //...
+  },
+  "scripts": {
+      //...
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
+    }
+  },
+}
+```
+
 # semantic-release
 
 link - https://github.com/semantic-release/semantic-release

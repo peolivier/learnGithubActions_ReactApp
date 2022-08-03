@@ -36,22 +36,42 @@
       "last 1 safari version"
     ]
   },
-  "release": {  
-    "branches": ["main"],
+  "release": {
+    "branches": [
+      "main"
+    ],
     "repositoryUrl": "https://github.com/peolivier/learnGithubActions_ReactApp",
     "plugins": [
-        "@semantic-release/commit-analyzer", 
-        "@semantic-release/release-notes-generator",
-        ["@semantic-release/github", {
-            "assets": [
-                { "path": "build.zip", "label": "Build" },
-                { "path": "coverage.zip", "label": "Coverage" }
-            ]
-        }]
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            {
+              "path": "build.zip",
+              "label": "Build"
+            },
+            {
+              "path": "coverage.zip",
+              "label": "Coverage"
+            }
+          ]
+        }
+      ]
     ]
-    },
+  },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.1",
     "prettier": "2.7.1",
     "semantic-release": "^19.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
