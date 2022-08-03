@@ -61,3 +61,17 @@ jobs:
       - name: Deploy to Production
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: npx surge --project ./build --domain high-pitched-move.surge.sh
+      - name: Open Issue
+        if: failure() && github.event_name == 'pull_request'
+        run: |
+        curl -X "POST" 
+          --url "https://api.github.com/repos/${{ github.repository }}/issues" \
+          --header "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" \
+          --header "Content-Type: application/json; charset=utf-8" \
+          --data $'{
+              "title": "Automated issue for commit: ${{ github.sha }}",
+              "body": "This issue was automatically created by the GitHub Action workflow **${{ github.workflow }}**.\n\nThe commit hash was: _${{ github.sha }}_.",
+              "assignees": [
+                ${{ github.event.pull_request.user.login }}
+              ],
+            }'

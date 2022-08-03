@@ -220,8 +220,7 @@ npm install commitizen -g
 ```
 
 # semantic-release
-
-link - https://github.com/semantic-release/semantic-release
+link - https://github.com/semantic-release/semantic-release  
 
 ```sh
 # https://github.com/semantic-release/semantic-release/blob/master/docs/usage/installation.md#installation
@@ -251,3 +250,9 @@ in `package.json`
         ]
     },
 ```
+
+
+# Slack Message - Get Notify!
+https://api.slack.com/  
+
+
