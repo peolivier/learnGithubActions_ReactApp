@@ -294,6 +294,9 @@ docs - https://docs.github.com/en/rest/overview/libraries
 
 [docs section 'Create an issue'](https://docs.github.com/en/rest/issues/issues#create-an-issue)  
 
+using @actions/github (really useful!)  
+https://github.com/actions/toolkit/tree/main/packages/github#usage  
+
 ```sh
 npx ncc build .github/actions/issue/index.js -o .github/actions/issue/dist
 ```
