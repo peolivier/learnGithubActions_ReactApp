@@ -11,9 +11,7 @@ jobs:
           title: Title
           body: Body
           assignees: |
-            bob
-            john
-            peolivier'
+            peolivier
       - run: |
           echo ${{ steps.issue.outputs.issue }}
       - uses: ./.github/actions/hello
