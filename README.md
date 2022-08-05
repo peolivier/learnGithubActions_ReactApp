@@ -287,3 +287,13 @@ npm - https://www.npmjs.com/package/@vercel/ncc
 npm install --save-dev @vercel/ncc
 npx ncc build .github/actions/hello/index.js -o .github/actions/hello/dist
 ```
+
+## Tool to help with 'Create Github issue'
+octokit - https://github.com/octokit  
+docs - https://docs.github.com/en/rest/overview/libraries  
+
+[docs section 'Create an issue'](https://docs.github.com/en/rest/issues/issues#create-an-issue)  
+
+```sh
+npx ncc build .github/actions/issue/index.js -o .github/actions/issue/dist
+```
