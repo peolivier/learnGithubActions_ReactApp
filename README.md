@@ -1,3 +1,6 @@
+[![CI](https://github.com/peolivier/learnGithubActions_ReactApp/actions/workflows/ci.yml/badge.svg)](https://github.com/peolivier/learnGithubActions_ReactApp/actions/workflows/ci.yml)
+[![CI](https://github.com/peolivier/learnGithubActions_ReactApp/actions/workflows/ci.yml/badge.svg?branch=develop&event=push)](https://github.com/peolivier/learnGithubActions_ReactApp/actions/workflows/ci.yml)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -96,6 +99,10 @@ npm install -g surge && surge
 #---equivalent to---
 npx surge
 ```
+
+### Github - Special Secrets
+Secrest at project level - `https://github.com/<user>/<repo>/settings/secrets/actions`  
+`ACTIONS_STEP_DEBUG = True` will enalbe DEBUG logging  
 
 ### Surge - Quick GetStarted
 
@@ -261,3 +268,22 @@ in `package.json`
 # Slack Message - Get Notify!
 
 https://api.slack.com/
+
+
+# Creating our own custom actions
+Toolkit to help - https://github.com/actions/toolkit
+
+```sh
+npm install @actions/github
+npm install @actions/core
+```
+
+
+## To compile a NodeJS file with dependencies into a SINGLE file
+github - https://github.com/vercel/ncc  
+npm - https://www.npmjs.com/package/@vercel/ncc  
+
+```sh
+npm install --save-dev @vercel/ncc
+npx ncc build .github/actions/hello/index.js -o .github/actions/hello/dist
+```
