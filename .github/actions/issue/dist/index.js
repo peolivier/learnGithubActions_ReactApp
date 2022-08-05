@@ -12215,13 +12215,15 @@ async function run(){
     const title = core.getInput('title');
     const body = core.getInput('body');
     const assignees = core.getInput('assignees');
+    const {owner, repo} =  github.context.repo;
 
-    const octokit = new github.Github(token);
-
-    const response = await octokit.issues.create({
+    const octokit = new github.getOctokit(token);
+    const response = await octokit.rest.issues.create({
       // owner: github.context.repo.owner,
       // repo: github.context.repo.repo,
-      ...github.context.repo,
+      // ...github.context.repo,
+      owner,
+      repo,
       title,
       body,
       assignees: assignees ? assignees.split('\n') : undefined
