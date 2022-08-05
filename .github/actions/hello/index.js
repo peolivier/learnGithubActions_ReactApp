@@ -12,7 +12,8 @@ try{
   core.error("error message");
 
   const name = core.getInput('who-to-greet');
-  core.setSecret('a password that will be marked in log (*****)')
+  // core.setSecret('a password that will be masked in log (*****)');
+  core.setSecret(name); // when argument is a variable, the use of this variable in logging will be masked
   console.log(`Hello ${name}`);
 
   const time = new Date();
@@ -22,8 +23,8 @@ try{
   console.log(JSON.stringify(github, null, '\t'));
   core.endGroup();
 
-  core.exportVariable('HELLO', 'hello you there!')
+  core.exportVariable('HELLO', 'hello you there!');
 } catch(error){
   // This is how you indicate the action has FAILED
-  core.setFailed('dododo')
+  core.setFailed('dododo');
 }
