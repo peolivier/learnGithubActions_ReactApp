@@ -300,3 +300,31 @@ https://github.com/actions/toolkit/tree/main/packages/github#usage
 ```sh
 npx ncc build .github/actions/issue/index.js -o .github/actions/issue/dist
 ```
+
+
+# Publish a Github action into the Marketplace
+Example for a Javascript  
+https://github.com/actions/javascript-action, then click on `Use this template`  
+or  
+direct url - https://github.com/actions/javascript-action/generate  
+
+has to be **Public**  
+
+on local machine, `git clone ...`  
+```sh
+# install all dependencies
+npm install
+```
+
+add a Icone to your Github action in `action.yml`  
+icons found here - _**https://feathericons.com/**_ (https://github.com/feathericons/feather)  
+```yml
+...
+branding:
+    icon: "alert-octagon"
+    color: "purple"
+```
+
+#### **Recommended versionning practice when publishing a Github Action**  
+https://github.com/actions/toolkit/blob/main/docs/action-versioning.md#recommendations  
+
