@@ -101,13 +101,11 @@ npx surge
 ```
 
 ### Github - Special Secrets
+
 Secrest at project level - `https://github.com/<user>/<repo>/settings/secrets/actions`  
-`ACTIONS_STEP_DEBUG = True` will enalbe DEBUG logging  
+`ACTIONS_STEP_DEBUG = True` will enalbe DEBUG logging
 
 ### Surge - Quick GetStarted
-
-
-
 
 ```sh
 npm install -g surge
@@ -269,8 +267,8 @@ in `package.json`
 
 https://api.slack.com/
 
-
 # Creating our own custom actions
+
 Toolkit to help - https://github.com/actions/toolkit
 
 ```sh
@@ -278,10 +276,10 @@ npm install @actions/github
 npm install @actions/core
 ```
 
-
 ## To compile a NodeJS file with dependencies into a SINGLE file
+
 github - https://github.com/vercel/ncc  
-npm - https://www.npmjs.com/package/@vercel/ncc  
+npm - https://www.npmjs.com/package/@vercel/ncc
 
 ```sh
 npm install --save-dev @vercel/ncc
@@ -289,42 +287,45 @@ npx ncc build .github/actions/hello/index.js -o .github/actions/hello/dist
 ```
 
 ## Tool to help with 'Create Github issue'
-octokit - https://github.com/octokit  
-docs - https://docs.github.com/en/rest/overview/libraries  
 
-[docs section 'Create an issue'](https://docs.github.com/en/rest/issues/issues#create-an-issue)  
+octokit - https://github.com/octokit  
+docs - https://docs.github.com/en/rest/overview/libraries
+
+[docs section 'Create an issue'](https://docs.github.com/en/rest/issues/issues#create-an-issue)
 
 using @actions/github (really useful!)  
-https://github.com/actions/toolkit/tree/main/packages/github#usage  
+https://github.com/actions/toolkit/tree/main/packages/github#usage
 
 ```sh
 npx ncc build .github/actions/issue/index.js -o .github/actions/issue/dist
 ```
 
-
 # Publish a Github action into the Marketplace
+
 Example for a Javascript  
 https://github.com/actions/javascript-action, then click on `Use this template`  
 or  
-direct url - https://github.com/actions/javascript-action/generate  
+direct url - https://github.com/actions/javascript-action/generate
 
-has to be **Public**  
+has to be **Public**
 
-on local machine, `git clone ...`  
+on local machine, `git clone ...`
+
 ```sh
 # install all dependencies
 npm install
 ```
 
 add a Icone to your Github action in `action.yml`  
-icons found here - _**https://feathericons.com/**_ (https://github.com/feathericons/feather)  
+icons found here - _**https://feathericons.com/**_ (https://github.com/feathericons/feather)
+
 ```yml
-...
+---
 branding:
-    icon: "alert-octagon"
-    color: "purple"
+  icon: "alert-octagon"
+  color: "purple"
 ```
 
-#### **Recommended versionning practice when publishing a Github Action**  
-https://github.com/actions/toolkit/blob/main/docs/action-versioning.md#recommendations  
+#### **Recommended versionning practice when publishing a Github Action**
 
+https://github.com/actions/toolkit/blob/main/docs/action-versioning.md#recommendations
