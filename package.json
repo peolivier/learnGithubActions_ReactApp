@@ -18,7 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format:check": "prettier --check \"**/*.{js,yml,yaml,css,scss,md}\""
+    "format:check": "prettier --check \"**/*.{js,yml,yaml,css,scss,md}\"",
+    "format:write": "prettier --write \"**/*.{js,yml,yaml,css,scss,md}\""
   },
   "eslintConfig": {
     "extends": [
