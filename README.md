@@ -76,7 +76,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Learning References
 
-[The Complete GitHub Actions & Workflows Guide](https://www.udemy.com/share/102DqF/)
+[The Complete GitHub Actions & Workflows Guide](https://www.udemy.com/share/102DqF/)  
+[ReactJS Tutorial: Todo List App with React Hooks - 2022](https://youtu.be/-l0FEONO-cM)  
+[React Todo List App Tutorial - Beginner React JS Project Using Hooks](https://youtu.be/E1E08i2UJGI)
 
 ```sh
 # https://create-react-app.dev/docs/getting-started
@@ -329,3 +331,13 @@ branding:
 #### **Recommended versionning practice when publishing a Github Action**
 
 https://github.com/actions/toolkit/blob/main/docs/action-versioning.md#recommendations
+
+# React - notes
+
+### React-icons
+
+https://react-icons.github.io/react-icons/
+
+```sh
+npm install react-icons --save
+```
